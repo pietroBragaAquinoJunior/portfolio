@@ -20,6 +20,13 @@ const openResume = () => {
     '_blank',
   )
 }
+
+const openResume2 = () => {
+  // O Vite entende que '/' aponta para a pasta public.
+  // Usamos o import.meta.env.BASE_URL para garantir que funcione no GitHub Pages (/portfolio/)
+  const pdfUrl = `${import.meta.env.BASE_URL}resume.pdf`
+  window.open(pdfUrl, '_blank')
+}
 </script>
 
 <template>
@@ -37,7 +44,7 @@ const openResume = () => {
           <button class="buttonWhatsapp" @click="openWhatsappChat">Contact via WhatsApp 📞</button>
           <button class="buttonGmail" @click="openGmailMessage">Contact via Gmail ✉️</button>
           <button class="buttonLinkedin" @click="openLinkedin">Contact via Linkedin 👔</button>
-          <button class="buttonResume" @click="openResume">Resume in Pdf 📄</button>
+          <button class="buttonResume" @click="openResume2">Resume in Pdf 📄</button>
         </div>
       </div>
       <div class="logoContainer">

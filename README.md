@@ -14,3 +14,4 @@ Live demo: https://pietrobragaaquinojunior.github.io/portfolio
 ```bash
 npm install
 npm run dev
+
